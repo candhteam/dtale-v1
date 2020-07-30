@@ -15,3 +15,40 @@
   background: #eaaa19;
   color: #ffffff;
 }
+
+.btn-2 {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: 0;
+  background: transparent;
+  font-weight: $medium;
+  font-size: 20px;
+  line-height: 50px;
+  position: relative;
+  @media (max-width: $media-md) {
+    font-size: 18px;
+    line-height: 48px;
+  }
+  @media (max-width: $media-xs) {
+    font-size: 16px;
+    line-height: 46px;
+  }
+  &:hover {
+    &::after {
+      width: 50%;
+      left: 60%;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 35%;
+    width: 30%;
+    background: #ffffff;
+    height: 2px;
+    transition: 0.2s ease-out;
+  }
+}
