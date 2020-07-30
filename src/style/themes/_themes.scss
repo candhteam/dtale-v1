@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  font-family: $font-1;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}

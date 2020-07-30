@@ -1,0 +1,95 @@
+header {
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 30px;
+
+    @media (max-width: $media-md) {
+      padding-right: calc(30px - 8px);
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @media (max-width: $media-xs) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .logo {
+      max-width: 120px;
+      position: relative;
+      z-index: 2;
+      svg {
+        width: 120px;
+        @media (max-width: $media-md) {
+          width: 80px;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+
+      &.menu-active {
+        .menu__row {
+          transform: translateX(0);
+        }
+      }
+
+      &__row {
+        display: flex;
+        padding-right: 15px;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: $media-md) {
+          // display: none;
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: calc(100% - 80px);
+          flex-direction: column;
+          background: #fff;
+          padding-top: 70px;
+          height: 100%;
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.103);
+          transform: translateX(-103%);
+          transition: 0.2s ease-out;
+        }
+
+        @media (max-width: $media-xs) {
+          padding-top: 60px;
+        }
+        &__list {
+          list-style: none;
+          &__link {
+            text-decoration: none;
+            text-align: left;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: $regular;
+            letter-spacing: 0.45px;
+            color: #4d4d4b;
+            opacity: 1;
+            padding: 20px 15px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              border-bottom-color: $yellow;
+            }
+            @media (max-width: $media-md) {
+              padding: 8px 30px;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .ctaBtn {
+        @media (max-width: $media-md) {
+          display: none;
+        }
+      }
+    }
+  }
+}

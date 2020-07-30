@@ -1,7 +1,7 @@
 {
-  "name": "static-html-webpack-boilerplate",
+  "name": "static-html-boilerplate-of-code-and-hue",
   "version": "1.1.1",
-  "description": "Modern tooling for old-school static webpage development",
+  "description": "This is a web development platform build by codeandhue",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
@@ -13,9 +13,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erickzhao/static-html-webpack-boilerplate.git"
+    "url": ""
   },
-  "author": "erick zhao",
+  "author": "Code&hue",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
@@ -52,5 +52,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
