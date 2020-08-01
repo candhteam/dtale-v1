@@ -1,0 +1,123 @@
+.services {
+  padding-top: 200px;
+  @media (max-width: $media-lg) {
+    padding-top: 180px;
+  }
+  @media (max-width: $media-md) {
+    padding-top: 140px;
+  }
+  @media (max-width: $media-xs) {
+    padding-top: 80px;
+  }
+  article {
+    h5 {
+      text-align: left;
+      letter-spacing: 2.8px;
+      color: #88888c;
+      opacity: 1;
+      margin: 0;
+      font-size: 14px;
+      line-height: normal;
+      font-weight: $medium;
+      margin-bottom: 40px;
+      @media (max-width: $media-md) {
+        font-size: 13px;
+      }
+      @media (max-width: $media-xs) {
+        font-size: 12px;
+      }
+    }
+  }
+  .image-sec-left {
+    display: flex;
+    flex-wrap: wrap;
+    .img {
+      width: 50%;
+      display: block;
+      @media (max-width: $media-xs) {
+        width: 100%;
+      }
+      img {
+        width: calc(100% - 100px);
+        display: block;
+        @media (max-width: $media-xs) {
+          width: 100%;
+        }
+      }
+    }
+    .content {
+      width: 50%;
+      display: block;
+      padding-top: 100px;
+      @media (max-width: $media-md) {
+        padding-top: 60px;
+      }
+      @media (max-width: $media-xs) {
+        width: 100%;
+        padding-top: 40px;
+      }
+      .container {
+        margin: 0;
+        padding-left: 0;
+        @media (max-width: $media-xs) {
+          margin: 0 auto;
+          padding-left: 30px;
+        }
+      }
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .image-sec-right {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    align-items: center;
+    @media (max-width: $media-xs) {
+      flex-direction: column-reverse;
+      padding-bottom: 40px;
+    }
+    .img {
+      width: 50%;
+      display: block;
+      @media (max-width: $media-xs) {
+        width: 100%;
+      }
+      img {
+        width: calc(100% - 100px);
+        display: block;
+        margin-left: 100px;
+        // width: 100%;
+        @media (max-width: $media-xs) {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+    .content {
+      width: 50%;
+      display: block;
+      //   padding-top: 100px;
+      @media (max-width: $media-md) {
+        // padding-top: 60px;
+      }
+      @media (max-width: $media-xs) {
+        width: 100%;
+        padding-top: 40px;
+      }
+      .container {
+        // margin: 0;
+        // padding-left: 0;
+        @media (max-width: $media-xs) {
+          margin: 0 auto;
+          padding-left: 30px;
+        }
+      }
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
