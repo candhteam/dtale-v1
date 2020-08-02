@@ -6,7 +6,8 @@ $(document).ready(function () {
     });
 
     $('.banner-slider').slick({
-        dots: true,
+        dots: false,
+        arrows: false,
         infinite: true,
         speed: 500,
         fade: true,
@@ -19,6 +20,12 @@ $(document).ready(function () {
         speed: 500,
         fade: true,
         autoplay: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 545,
+                settings: "unslick"
+            }
+        ]
     });
 });

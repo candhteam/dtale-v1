@@ -112,13 +112,13 @@ header {
           &__link {
             text-decoration: none;
             text-align: left;
-            font-size: 15px;
+            font-size: 17px;
             line-height: 24px;
             font-weight: $regular;
             letter-spacing: 0.45px;
             color: #4d4d4b;
             opacity: 1;
-            padding: 30px 15px;
+            padding: 30px 30px;
             border-bottom: 3px solid transparent;
             transition: 0.3s ease-in-out;
             &:hover {

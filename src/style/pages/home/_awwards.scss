@@ -23,7 +23,22 @@
   .awwards-slider {
     display: flex;
 
+    padding-bottom: 30px;
     overflow-x: scroll;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: red;
+      cursor: pointer;
+    }
     &::-webkit-scrollbar {
       width: 1px;
     }
@@ -38,15 +53,26 @@
     }
 
     aside {
+      padding-right: 20px;
       .content {
         display: flex;
         align-items: center;
+        padding-top: 15px;
+
         img {
           width: 100%;
           display: block;
           max-width: 100px;
         }
         span {
+          display: inline-block;
+          padding-left: 15px;
+          text-align: left;
+          letter-spacing: 0.9px;
+          color: #333332;
+          font-weight: $regular;
+          font-size: 16px;
+          line-height: normal;
         }
       }
     }
