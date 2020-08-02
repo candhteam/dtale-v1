@@ -88,3 +88,32 @@
     transition: all 0.2s ease-out;
   }
 }
+
+.btn-3 {
+  text-align: left;
+  letter-spacing: 0.36px;
+  color: #ebebe7;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: $medium;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  &:hover {
+    &::after {
+      width: 90%;
+      left: 10%;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -3px;
+    left: 0;
+    width: 30%;
+    background: #ffffff;
+    height: 1px;
+    transition: 0.2s ease-out;
+  }
+}

@@ -1,9 +1,13 @@
 .home-banner {
+  position: relative;
   .banner-slider {
     img {
       max-height: 90vh;
       object-fit: cover;
       width: 100%;
+      @media (max-width: $media-xs) {
+        min-height: 90vh;
+      }
     }
     .slick-arrow {
       display: none !important;
@@ -11,7 +15,7 @@
     .slick-dots {
       margin: 0;
       padding: 0;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       position: absolute;
@@ -56,6 +60,34 @@
           color: transparent;
           border-radius: 50%;
           display: block;
+        }
+      }
+    }
+  }
+  .banner-text {
+    width: 100%;
+    height: 100%;
+    background: #00000094;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .container {
+      height: 100%;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      justify-content: center;
+      h1 {
+        max-width: 1000px;
+        width: 100%;
+        margin-bottom: 100px;
+        @media (max-width: $media-xs) {
+          margin-bottom: 60px;
         }
       }
     }

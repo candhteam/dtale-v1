@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.site-body {
+.sitebody {
   // overflow-x: hidden !important;
   max-width: 2000px;
   margin: 0 auto;
@@ -85,15 +85,15 @@ p {
     letter-spacing: 0px;
     opacity: 1;
     font-weight: $regular;
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 50px;
+    line-height: 65px;
     @media (max-width: $media-md) {
-      font-size: 30px;
-      line-height: 45px;
+      font-size: 35px;
+      line-height: 50px;
     }
     @media (max-width: $media-xs) {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 30px;
+      line-height: 40px;
     }
   }
   &.heading___italics {

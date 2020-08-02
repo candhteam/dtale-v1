@@ -9,7 +9,7 @@ header {
     top: 0;
     right: 0;
     width: 100%;
-    background-color: blue;
+    background-color: #fff;
     height: 68px;
     @media (max-width: $media-xs) {
       height: 60px;
@@ -100,6 +100,10 @@ header {
             padding-bottom: 3px;
           }
 
+          &.last-child {
+            padding-right: 40px;
+          }
+
           &.active-link {
             .menu__row__list__link {
               border-bottom-color: $yellow;
@@ -114,11 +118,15 @@ header {
             letter-spacing: 0.45px;
             color: #4d4d4b;
             opacity: 1;
-            padding: 20px 15px;
+            padding: 30px 15px;
             border-bottom: 3px solid transparent;
             transition: 0.3s ease-in-out;
             &:hover {
               border-bottom-color: $yellow;
+            }
+            @media (max-width: $media-xlg) {
+              padding-top: 20px;
+              padding-bottom: 20px;
             }
             @media (max-width: $media-md) {
               padding: 2px 0px;
@@ -149,6 +157,12 @@ header {
       }
 
       .ctaBtn {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @media (max-width: $media-xlg) {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
         @media (max-width: $media-md) {
           display: none;
         }

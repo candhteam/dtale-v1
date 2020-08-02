@@ -10,13 +10,15 @@ $(document).ready(function () {
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        autoplay: true
     });
     $('.home-image-slider').slick({
         dots: false,
         infinite: true,
         speed: 500,
         fade: true,
+        autoplay: true,
         cssEase: 'linear'
     });
 });
