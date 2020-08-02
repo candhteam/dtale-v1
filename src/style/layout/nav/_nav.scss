@@ -86,6 +86,8 @@ header {
           box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.103);
           transform: translateX(-103%);
           transition: 0.2s ease-out;
+          padding-left: 30px;
+          padding-right: 30px;
         }
 
         @media (max-width: $media-xs) {
@@ -93,6 +95,10 @@ header {
         }
         &__list {
           list-style: none;
+          @media (max-width: $media-md) {
+            padding-top: 3px;
+            padding-bottom: 3px;
+          }
 
           &.active-link {
             .menu__row__list__link {
@@ -115,8 +121,9 @@ header {
               border-bottom-color: $yellow;
             }
             @media (max-width: $media-md) {
-              padding: 5px 30px;
+              padding: 2px 0px;
               display: block;
+              border-bottom: 2px solid transparent;
             }
           }
         }
@@ -132,7 +139,7 @@ header {
             letter-spacing: 0.45px;
             color: #4d4d4b;
             opacity: 1;
-            padding: 2px 30px;
+            padding: 2px 0px;
             padding-right: 10px;
             i {
               font-family: $font-2;

@@ -9,7 +9,7 @@
       content: "";
       width: calc(50% - 100px);
       height: 100%;
-      background-position: right center;
+      background-position: center;
       background-repeat: no-repeat;
       background-image: url("../static/jpeg/05.png");
       background-size: cover;
@@ -86,7 +86,7 @@
       content: "";
       width: calc(50% - 100px);
       height: 100%;
-      background-position: right center;
+      background-position: center;
       background-repeat: no-repeat;
       background-image: url("../static/jpeg/05.png");
       background-size: cover;
@@ -101,7 +101,9 @@
     .flex {
       margin-left: 0;
       margin-right: 0;
-      flex-direction: column-reverse;
+      @media (max-width: $media-md) {
+        flex-direction: column-reverse;
+      }
     }
     article {
       width: 50%;
