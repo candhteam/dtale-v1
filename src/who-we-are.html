@@ -132,7 +132,7 @@
           <div class="flex">
             <article>
               <div class="img">
-                <img src="./static/jpeg/05.png" alt="">
+                <img src="./static/jpeg/whoweare-pic2.jpg" alt="">
               </div>
             </article>
             <article>
@@ -264,8 +264,118 @@
 
   </div>
 
+
+
+  <!-- booking modal starts here -->
+  <div class="form_modal booking_model">
+    <article class="form_modal_container">
+      <span class="close">
+        <i></i>
+        <i></i>
+      </span>
+      <div class="form_modal_content">
+        <h2 class="heading heading__medium heading___italics">New home? Room makeover? or just need a starting point?
+          Get a free consultation at our stores near you</h2>
+        <aside>
+          <form action="" method="post" id="appointment-form">
+            <div class="b_m_input">
+              <label for="fname">Name</label>
+              <input type="text" name="fname" id="fname">
+            </div>
+            <div class="b_m_input">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="b_m_input">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" name="phoneNumber" id="phoneNumber">
+            </div>
+            <div class="b_m_input">
+              <label for="date">Date</label>
+              <input type="date" name="date" class="datepicker" id="">
+              <!-- <input id="datepicker" width="276" /> -->
+            </div>
+
+            <div class="b_m_input">
+              <label for="message">Message</label>
+              <textarea name="message" id="" rows="4"></textarea>
+            </div>
+            <div class="b_m_submit">
+              <input type="submit" value="send">
+            </div>
+          </form>
+
+          <div id="responss">
+
+          </div>
+        </aside>
+      </div>
+    </article>
+  </div>
+  <!-- booking modal ends here -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script>
+    jQuery.validator.methods.matches = function (value, element, params) {
+      var re = new RegExp(params);
+      return this.optional(element) || re.test(value);
+    }
+
+    $(document).ready(function () {
+      $("#appointment-form").validate({
+        rules: {
+          fname: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          phoneNumber: {
+            required: true,
+            matches: "^(\\d|\\s)+$",
+            minlength: 10,
+            maxlength: 20
+          },
+          date: {
+            required: true
+          }
+        },
+        messages: {
+          phoneNumber: {
+            matches: "Please enter valid phone number"
+          }
+        },
+        submitHandler: function (form) {
+          $.ajax({
+            url: './mailer.php',
+            data: $(form).serialize(),
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            dataType: 'json',
+            success: function (response) {
+              //load json data from server and output message
+              if (response.type == 'error') { //load json data from server and output message
+                // output = '<div class="error">' + response.text + '</div>';
+              } else {
+                output = '<div class="success">' + response.text + '</div>';
+              }
+              $("#response").hide().html(output).slideDown();
+              $(".contact-form").addClass('mail-send');
+              setTimeout(function () {
+                $(".contact-form").removeClass('mail-send');
+              }, 4000);
+            }
+          });
+        }
+      })
+    });
+  </script>
 
 
 </body>
+
+</html>
