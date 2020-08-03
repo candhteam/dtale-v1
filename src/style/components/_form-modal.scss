@@ -95,6 +95,7 @@
 
         @media (max-width: $media-lg) {
           font-size: 28px;
+          line-height: normal;
         }
 
         @media (max-width: $media-md) {
@@ -197,7 +198,7 @@
             width: 186px;
             margin: 0 auto;
             overflow: hidden;
-            background: #efeff0;
+            background: #4d4d4b;
             input[type="submit"] {
               padding: 20px 70px;
               margin: 0 auto;
@@ -209,7 +210,9 @@
               font-size: 13px;
               line-height: normal;
               letter-spacing: 0.15rem;
-              color: #000;
+              color: #fff;
+
+              cursor: pointer;
 
               position: relative;
               z-index: 2;
