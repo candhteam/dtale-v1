@@ -28,4 +28,17 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // ================booking_model starts here============================
+    $(".booking_form").click(function (e) {
+        e.preventDefault();
+        $(".booking_model").addClass("booking_model_open");
+    });
+
+    $(".form_modal .form_modal_container .close").click(function (e) {
+        e.preventDefault();
+        $(".booking_model").removeClass("booking_model_open");
+    });
+    // ================booking_model ends here==============================
+
 });

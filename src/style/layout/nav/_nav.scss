@@ -101,7 +101,7 @@ header {
           }
 
           &.last-child {
-            padding-right: 40px;
+            padding-right: 30px;
           }
 
           &.active-link {
@@ -127,6 +127,8 @@ header {
             @media (max-width: $media-xlg) {
               padding-top: 20px;
               padding-bottom: 20px;
+              padding-left: 20px;
+              padding-right: 20px;
             }
             @media (max-width: $media-md) {
               padding: 2px 0px;
