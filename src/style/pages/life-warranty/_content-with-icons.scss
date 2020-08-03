@@ -60,9 +60,9 @@
         font-weight: $semi-bold;
         font-size: 25px;
         line-height: 35px;
-        letter-spacing: normal;
+        letter-spacing: 0.03rem;
         padding-bottom: 5px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
 
         @media (max-width: $media-lg) {
           font-size: 24px;
