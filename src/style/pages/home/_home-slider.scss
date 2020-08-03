@@ -57,6 +57,10 @@
         img {
           width: 100%;
           display: block;
+          @media (max-width: $media-xs) {
+            min-height: 400px;
+            object-fit: cover;
+          }
         }
       }
       .slick-arrow {
