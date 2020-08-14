@@ -1,18 +1,45 @@
 .awwards {
+  // display: none;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  @media (max-width: $media-lg) {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+  @media (max-width: $media-md) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  @media (max-width: $media-xs) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .news_image {
+    @media (max-width: $media-xs) {
+      display: none;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
   article {
-    background-color: #333332;
+    // background-color: #333332;
   }
 
   h5 {
     text-align: left;
-    letter-spacing: 2.8px;
-    color: #88888c;
     opacity: 1;
     margin: 0;
-    font-size: 14px;
+    font-size: 30px;
     line-height: normal;
     font-weight: $medium;
-    padding-bottom: 40px;
+    font-family: $font-2;
+    letter-spacing: 4px;
+    color: #4d4d4b;
+    padding-bottom: 30px;
+    padding-top: 30px;
     @media (max-width: $media-md) {
       font-size: 13px;
     }

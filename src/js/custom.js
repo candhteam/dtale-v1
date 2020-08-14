@@ -14,6 +14,18 @@ $(document).ready(function () {
         cssEase: 'linear',
         autoplay: true
     });
+    $('.product-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        // fade: true,
+        cssEase: 'linear',
+        // autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+
+    });
     $('.home-image-slider').slick({
         dots: false,
         infinite: true,
