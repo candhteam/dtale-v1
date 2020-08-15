@@ -26,6 +26,26 @@ $(document).ready(function () {
         slidesToScroll: 1,
 
     });
+
+    $('.product_slider-for').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.product_slider-nav'
+    });
+    $('.product_slider-nav').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        asNavFor: '.product_slider-for',
+        // centerMode: true,
+        focusOnSelect: true,
+
+    });
+
     $('.home-image-slider').slick({
         dots: false,
         infinite: true,

@@ -117,3 +117,28 @@
     transition: 0.2s ease-out;
   }
 }
+
+.btn__4 {
+  text-align: left;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: $bold;
+  font-size: 14px;
+  line-height: normal;
+  padding: 15px 30px;
+  background: #eaaa19;
+  box-shadow: 0px 3px 6px #00000017;
+  border-radius: 10px;
+  border: 0;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background: #eaab19d7;
+  }
+  @media (max-width: $media-md) {
+    font-size: 13px;
+  }
+  @media (max-width: $media-xs) {
+    font-size: 12px;
+  }
+}
