@@ -107,13 +107,24 @@ header {
           &.active-link {
             .menu__row__list__link {
               border-bottom-color: $yellow;
+              position: relative;
+              z-index: 2;
             }
           }
           &.has-submenu {
             .menu__row__list__link {
+              position: relative;
               &::after {
                 display: block;
                 content: "";
+                width: 8px;
+                height: 8px;
+                background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjEzLjMzMyAyMTMuMzMzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMTMuMzMzIDIxMy4zMzM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cG9seWdvbiBwb2ludHM9IjAsNTMuMzMzIDEwNi42NjcsMTYwIDIxMy4zMzMsNTMuMzMzIAkJIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 8px;
+                top: calc(50% - 2px);
               }
             }
             &:hover {
@@ -121,6 +132,9 @@ header {
                 opacity: 1;
                 visibility: visible;
                 transition: none;
+                @media (max-width: $media-md) {
+                  position: relative;
+                }
               }
             }
             .submenu {
@@ -133,6 +147,13 @@ header {
               width: 100%;
               background-color: #ebebe7;
               transition: 0.3s ease-in;
+              @media (max-width: $media-md) {
+                top: 0;
+                // position: relative;
+                // opacity: 1;
+                // visibility: visible;
+                background-color: transparent;
+              }
               &__menu {
                 display: flex;
                 align-items: center;
@@ -144,11 +165,15 @@ header {
                   padding: 0;
                   @media (max-width: $media-md) {
                     width: 100%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 15px;
                   }
                   &__li {
                     list-style: none;
                     display: block;
                     padding-bottom: 15px;
+
                     &__link {
                       text-align: left;
                       letter-spacing: 0.75px;
@@ -170,6 +195,9 @@ header {
                         background-color: #4d4d4b;
                         height: 1px;
                         transition: 0.2s ease-in-out;
+                        @media (max-width: $media-md) {
+                          display: none;
+                        }
                       }
                     }
                     &.active_li {
@@ -291,6 +319,8 @@ header {
             transition: 0.3s ease-in-out;
             &:hover {
               border-bottom-color: $yellow;
+              position: relative;
+              z-index: 2;
             }
             @media (max-width: $media-xlg) {
               padding-top: 20px;
@@ -307,6 +337,39 @@ header {
         }
         .nav-contact {
           padding-top: 20px;
+          .phone__icon {
+            display: flex;
+            align-items: center;
+            padding-bottom: 5px;
+            a {
+              margin-right: 5px;
+              background-color: #444345;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-items: center;
+              padding: 0;
+              svg {
+                width: 15px;
+                margin: 0 auto;
+                fill: #fff;
+              }
+              &:last-child {
+                width: auto;
+                height: auto;
+                border-radius: none;
+                display: block;
+                background-color: transparent;
+              }
+              &:nth-child(1) {
+                svg {
+                  width: 12px;
+                }
+              }
+            }
+          }
           a {
             display: block;
             text-decoration: none;

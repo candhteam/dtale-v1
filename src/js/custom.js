@@ -10,8 +10,8 @@ $(document).ready(function () {
         $(".tables_item").removeClass("active_item");
         $(".consoles_item").removeClass("active_item");
 
-        $(this).addClass("active_li");
         $(".submenu__menu__ul__li").removeClass("active_li");
+        $(this).addClass("active_li");
 
     });
     $(".has-submenu .tables_li").mouseover(function () {
@@ -19,16 +19,16 @@ $(document).ready(function () {
         $(".chair_item").removeClass("active_item");
         $(".consoles_item").removeClass("active_item");
 
-        $(this).addClass("active_li");
         $(".submenu__menu__ul__li").removeClass("active_li");
+        $(this).addClass("active_li");
     });
     $(".has-submenu .consoles_li").mouseover(function () {
         $(".consoles_item").addClass("active_item");
         $(".chair_item").removeClass("active_item");
         $(".tables_item").removeClass("active_item");
 
-        $(this).addClass("active_li");
         $(".submenu__menu__ul__li").removeClass("active_li");
+        $(this).addClass("active_li");
     });
 
     $('.banner-slider').slick({
