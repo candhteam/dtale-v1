@@ -142,11 +142,14 @@ header {
               opacity: 0;
               visibility: hidden;
               left: 0;
-              top: 68px;
+              top: 88px;
               right: 0;
               width: 100%;
               background-color: #ebebe7;
-              transition: 0.3s ease-in;
+              transition: none;
+              @media (max-width: $media-xlg) {
+                top: 68px;
+              }
               @media (max-width: $media-md) {
                 top: 0;
                 // position: relative;
