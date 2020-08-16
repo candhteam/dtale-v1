@@ -109,6 +109,174 @@ header {
               border-bottom-color: $yellow;
             }
           }
+          &.has-submenu {
+            .menu__row__list__link {
+              &::after {
+                display: block;
+                content: "";
+              }
+            }
+            &:hover {
+              .submenu {
+                opacity: 1;
+                visibility: visible;
+                transition: none;
+              }
+            }
+            .submenu {
+              position: absolute;
+              opacity: 0;
+              visibility: hidden;
+              left: 0;
+              top: 68px;
+              right: 0;
+              width: 100%;
+              background-color: #ebebe7;
+              transition: 0.3s ease-in;
+              &__menu {
+                display: flex;
+                align-items: center;
+                max-width: 1000px;
+                margin: 0 auto;
+                &__ul {
+                  width: 20%;
+                  margin: 0;
+                  padding: 0;
+                  @media (max-width: $media-md) {
+                    width: 100%;
+                  }
+                  &__li {
+                    list-style: none;
+                    display: block;
+                    padding-bottom: 15px;
+                    &__link {
+                      text-align: left;
+                      letter-spacing: 0.75px;
+                      color: #4d4d4b;
+                      font-weight: $medium;
+                      font-style: 30px;
+                      line-height: normal;
+                      display: inline-block;
+                      text-decoration: none;
+                      &:hover {
+                        &::after {
+                          width: 100%;
+                        }
+                      }
+                      &::after {
+                        display: block;
+                        content: "";
+                        width: 0;
+                        background-color: #4d4d4b;
+                        height: 1px;
+                        transition: 0.2s ease-in-out;
+                      }
+                    }
+                    &.active_li {
+                      a {
+                        &::after {
+                          width: 100%;
+                        }
+                      }
+                    }
+                  }
+                }
+                &__products {
+                  width: 80%;
+                  @media (max-width: $media-md) {
+                    display: none;
+                  }
+                  &__items {
+                    &__item {
+                      display: flex;
+                      flex-wrap: wrap;
+                      display: none;
+                      &.active_item {
+                        display: flex;
+                      }
+                      a {
+                        width: calc(100% / 3);
+                        text-decoration: none;
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                        @media (max-width: $media-md) {
+                          width: calc(100% / 2);
+                        }
+                        @media (max-width: $media-xs) {
+                          width: calc(100% / 1);
+                          padding-top: 40px;
+                        }
+                        .product__block {
+                          padding-left: 30px;
+                          padding-right: 30px;
+                          @media (max-width: $media-xs) {
+                            padding-left: 0px;
+                            padding-right: 0px;
+                          }
+                          figure {
+                            background-color: #fff;
+                            box-shadow: 0px 3px 6px #0000001d;
+                            margin: 0;
+                            position: relative;
+                            // overflow: hidden;
+                            // padding: 100px 50px 20px;
+                            &:hover {
+                              img {
+                                &:nth-child(odd) {
+                                  opacity: 0;
+                                  visibility: hidden;
+                                  //   position: absolute;
+                                }
+                                &:nth-child(even) {
+                                  //   visibility: visible;
+                                  opacity: 1;
+                                  //   position: relative;
+                                }
+                              }
+                            }
+                            img {
+                              width: 100%;
+                              display: block;
+                              //   max-width: 230px;
+                              margin: 0 auto;
+                              //   min-height: 200px;
+                              object-fit: cover;
+                              transition: 0.2s;
+                              &:nth-child(even) {
+                                opacity: 0;
+                                // visibility: hidden;
+                                top: 0;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 100%;
+                              }
+                            }
+                          }
+                          span {
+                            display: block;
+                            text-align: left;
+                            letter-spacing: 0.18px;
+                            color: #4d4d4b;
+                            font-size: 16px;
+                            line-height: normal;
+                            font-weight: $regular;
+                            padding-top: 20px;
+                            @media (max-width: $media-xs) {
+                              font-size: 14px;
+                              padding-top: 10px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
           &__link {
             text-decoration: none;
             text-align: left;

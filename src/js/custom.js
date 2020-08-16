@@ -5,6 +5,32 @@ $(document).ready(function () {
         $(this).parent().toggleClass('menu-active');
     });
 
+    $(".has-submenu .chair_li").mouseover(function () {
+        $(".chair_item").addClass("active_item");
+        $(".tables_item").removeClass("active_item");
+        $(".consoles_item").removeClass("active_item");
+
+        $(this).addClass("active_li");
+        $(".submenu__menu__ul__li").removeClass("active_li");
+
+    });
+    $(".has-submenu .tables_li").mouseover(function () {
+        $(".tables_item").addClass("active_item");
+        $(".chair_item").removeClass("active_item");
+        $(".consoles_item").removeClass("active_item");
+
+        $(this).addClass("active_li");
+        $(".submenu__menu__ul__li").removeClass("active_li");
+    });
+    $(".has-submenu .consoles_li").mouseover(function () {
+        $(".consoles_item").addClass("active_item");
+        $(".chair_item").removeClass("active_item");
+        $(".tables_item").removeClass("active_item");
+
+        $(this).addClass("active_li");
+        $(".submenu__menu__ul__li").removeClass("active_li");
+    });
+
     $('.banner-slider').slick({
         dots: false,
         arrows: false,
@@ -24,6 +50,13 @@ $(document).ready(function () {
         // autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+
+        responsive: [
+            {
+                breakpoint: 545,
+                settings: "unslick"
+            }
+        ]
 
     });
 
