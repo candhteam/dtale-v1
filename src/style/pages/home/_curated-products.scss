@@ -11,6 +11,12 @@
   @media (max-width: $media-xs) {
     // padding-top: 40px;
   }
+  .container {
+    @media (max-width: $media-xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   article {
     .product-slider {
       @media (max-width: $media-xs) {
@@ -21,7 +27,10 @@
 
       .product_slider_item {
         @media (max-width: $media-xs) {
-          min-width: calc(100% - 30px);
+          min-width: calc(100% - 60px);
+          &:first-child {
+            margin-left: 30px;
+          }
         }
         .product__block {
           padding-left: 30px;

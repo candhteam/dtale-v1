@@ -66,7 +66,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        asNavFor: '.product_slider-nav'
+        asNavFor: '.product_slider-nav',
+        swipe: false
     });
     $('.product_slider-nav').slick({
         dots: false,

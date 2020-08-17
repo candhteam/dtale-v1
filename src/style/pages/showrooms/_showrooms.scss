@@ -158,6 +158,48 @@
               height: 1px;
               background: #4d4d4b67;
             }
+            .phone__icon {
+              display: flex;
+              align-items: center;
+              a {
+                margin-right: 5px;
+                background-color: #444345;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                color: #4d4d4b;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: $semi-bold;
+                @media (max-width: $media-md) {
+                  font-size: 18px;
+                }
+                @media (max-width: $media-xs) {
+                  // font-size: 19px;
+                  // line-height: 29px;
+                }
+                svg {
+                  width: 15px;
+                  margin: 0 auto;
+                  fill: #fff;
+                }
+                &:last-child {
+                  width: auto;
+                  height: auto;
+                  border-radius: none;
+                  display: block;
+                  background-color: transparent;
+                }
+                &:nth-child(1) {
+                  svg {
+                    width: 12px;
+                  }
+                }
+              }
+            }
           }
           p {
             color: #4d4d4b;
