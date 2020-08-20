@@ -27,4 +27,35 @@
   .image {
     margin-top: 80px;
   }
+
+  .play-video {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 101;
+    img {
+      width: 96px;
+      height: 96px;
+      object-fit: contain;
+    }
+    .play-video__text {
+      text-align: left;
+      letter-spacing: 0.7px;
+      color: #ffffff;
+      display: block;
+      font-size: 14px;
+      font-weight: $medium;
+      display: block;
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
 }
