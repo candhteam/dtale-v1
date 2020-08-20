@@ -32,8 +32,19 @@ body {
   }
 }
 
+a,
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 button {
   cursor: pointer;
+}
+
+.semi-bold {
+  font-weight: $semi-bold !important;
 }
 
 p {
@@ -146,8 +157,7 @@ p {
   }
 }
 
-
-.mini__heading{
+.mini__heading {
   margin: 0 auto;
   display: inline-block;
   text-align: center;

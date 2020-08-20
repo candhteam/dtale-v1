@@ -17,6 +17,9 @@
       padding-right: 0;
     }
   }
+  a {
+    text-decoration: none;
+  }
   article {
     .product-slider {
       @media (max-width: $media-xs) {
