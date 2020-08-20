@@ -633,64 +633,7 @@ C276.546,215.678,222.799,268.994,156.734,268.994z" />
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script>
-    jQuery.validator.methods.matches = function (value, element, params) {
-      var re = new RegExp(params);
-      return this.optional(element) || re.test(value);
-    }
-
-    $(document).ready(function () {
-      $("#appointment-form").validate({
-        rules: {
-          fname: {
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          phoneNumber: {
-            required: true,
-            matches: "^(\\d|\\s)+$",
-            minlength: 10,
-            maxlength: 20
-          },
-          date: {
-            required: true
-          }
-        },
-        messages: {
-          phoneNumber: {
-            matches: "Please enter valid phone number"
-          }
-        },
-        submitHandler: function (form) {
-          $.ajax({
-            url: './mailer.php',
-            data: $(form).serialize(),
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            dataType: 'json',
-            success: function (response) {
-              //load json data from server and output message
-              if (response.type == 'error') { //load json data from server and output message
-                // output = '<div class="error">' + response.text + '</div>';
-              } else {
-                output = '<div class="success">' + response.text + '</div>';
-              }
-              $("#response").hide().html(output).slideDown();
-              $(".contact-form").addClass('mail-send');
-              setTimeout(function () {
-                $(".contact-form").removeClass('mail-send');
-              }, 4000);
-            }
-          });
-        }
-      })
-    });
-  </script>
+  <script src="static/js/jquery.validate.min.js"></script>
 
 
 </body>

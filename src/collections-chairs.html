@@ -256,85 +256,49 @@
             <h2 class="heading heading__big ">Chairs</h2>
           </div>
           <div class="row">
-            <a href="collection-chair-detail.html">
+            <a href="collection-chair-detail-Adron.html">
               <div class="product__block">
                 <figure>
-                  <img src="./static/jpeg/products/chairs/Armchairs-Armchairs/Kwan/pic1.jpg" alt="">
-                  <img src="./static/jpeg/products/chairs/Armchairs-Armchairs/Kwan/pic4-hover.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Adron/pic1.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Adron/pic3-hover.jpg" alt="">
                 </figure>
                 <span>Adron / Arm Chairs</span>
               </div>
             </a>
-            <a href="collection-chair-detail.html">
+            <a href="collection-chair-detail-artdeco.html">
               <div class="product__block">
                 <figure>
-                  <img src="./static/jpeg/products/product-slider_2.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-2.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Art Deco/pic1.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Art Deco/pic2-hover.jpg" alt="">
                 </figure>
-                <span>Adron / Arm Chairs</span>
+                <span>Art Deco / Arm Chairs</span>
               </div>
             </a>
-            <a href="collection-chair-detail.html">
+            <a href="collection-chair-detail-Baku.html">
               <div class="product__block">
                 <figure>
-                  <img src="./static/jpeg/products/product-slider_3.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-3.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Baku/pic1.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Baku/pic4-hover.jpg" alt="">
                 </figure>
-                <span>Adron / Arm Chairs</span>
+                <span>Baku / Arm Chairs</span>
               </div>
             </a>
-            <a href="collection-chair-detail.html">
+            <a href="collection-chair-detail-Kwan.html">
               <div class="product__block">
                 <figure>
-                  <img src="./static/jpeg/products/product-slider_4.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-4.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Kwan/pic1.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Armchairs/Kwan/pic4-hover.jpg" alt="">
                 </figure>
-                <span>Adron / Arm Chairs</span>
+                <span>Kwan / Arm Chairs</span>
               </div>
             </a>
-            <a href="collection-chair-detail.html">
+            <a href="collection-chair-detail-Adrian.html">
               <div class="product__block">
                 <figure>
-                  <img src="./static/jpeg/products/product-slider_5.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-5.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Dining/Adrian/pic1.jpg" alt="">
+                  <img src="./static/jpeg/products/Chairs/Dining/Adrian/pic2-hover.jpg" alt="">
                 </figure>
-                <span>Adron / Arm Chairs</span>
-              </div>
-            </a>
-            <a href="collection-chair-detail.html">
-              <div class="product__block">
-                <figure>
-                  <img src="./static/jpeg/products/product-slider_6.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-6.jpg" alt="">
-                </figure>
-                <span>Adron / Arm Chairs</span>
-              </div>
-            </a>
-            <a href="collection-chair-detail.html">
-              <div class="product__block">
-                <figure>
-                  <img src="./static/jpeg/products/product-slider_7.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-7.jpg" alt="">
-                </figure>
-                <span>Adron / Arm Chairs</span>
-              </div>
-            </a>
-            <a href="collection-chair-detail.html">
-              <div class="product__block">
-                <figure>
-                  <img src="./static/jpeg/products/product-slider_8.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-8.jpg" alt="">
-                </figure>
-                <span>Adron / Arm Chairs</span>
-              </div>
-            </a>
-            <a href="collection-chair-detail.html">
-              <div class="product__block">
-                <figure>
-                  <img src="./static/jpeg/products/product-slider_9.png" alt="">
-                  <img src="./static/jpeg/products/product_detail-9.jpg" alt="">
-                </figure>
-                <span>Adron / Arm Chairs</span>
+                <span>Adrian / Dining</span>
               </div>
             </a>
           </div>
@@ -604,64 +568,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script>
-    jQuery.validator.methods.matches = function (value, element, params) {
-      var re = new RegExp(params);
-      return this.optional(element) || re.test(value);
-    }
-
-    $(document).ready(function () {
-      $("#appointment-form").validate({
-        rules: {
-          fname: {
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          phoneNumber: {
-            required: true,
-            matches: "^(\\d|\\s)+$",
-            minlength: 10,
-            maxlength: 20
-          },
-          date: {
-            required: true
-          }
-        },
-        messages: {
-          phoneNumber: {
-            matches: "Please enter valid phone number"
-          }
-        },
-        submitHandler: function (form) {
-          $.ajax({
-            url: './mailer.php',
-            data: $(form).serialize(),
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            dataType: 'json',
-            success: function (response) {
-              //load json data from server and output message
-              if (response.type == 'error') { //load json data from server and output message
-                // output = '<div class="error">' + response.text + '</div>';
-              } else {
-                output = '<div class="success">' + response.text + '</div>';
-              }
-              $("#response").hide().html(output).slideDown();
-              $(".contact-form").addClass('mail-send');
-              setTimeout(function () {
-                $(".contact-form").removeClass('mail-send');
-              }, 4000);
-            }
-          });
-        }
-      })
-    });
-  </script>
+  <script src="static/js/jquery.validate.min.js"></script>
 
 
 </body>

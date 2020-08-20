@@ -58,6 +58,8 @@
         img {
           width: 100%;
           display: block;
+          max-height: 90vh;
+          object-fit: cover;
           @media (max-width: $media-md) {
             min-height: 400px;
             object-fit: cover;

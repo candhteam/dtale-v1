@@ -113,7 +113,24 @@
         padding-left: 30px;
         padding-right: 30px;
         width: 100%;
+        .form-wrapper {
+          max-width: 460px;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+        }
+        #response {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: none;
+          background-color: #ffffff;
 
+          justify-content: center;
+          align-items: center;
+        }
         form {
           max-width: 460px;
           width: 100%;
@@ -154,8 +171,7 @@
             }
 
             input[type="date"] {
-              background: #fff
-                url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+              background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
                 97% 50% no-repeat;
               padding-right: 0;
             }

@@ -115,6 +115,14 @@
           }
         }
         .btn__4 {
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+          svg {
+            width: 22px;
+            fill: #fff;
+            margin-right: 5px;
+          }
         }
       }
       .product_item__slider {
@@ -188,7 +196,8 @@
             }
             figure {
               background-color: #fff;
-              box-shadow: 0px 3px 6px #0000001d;
+              // box-shadow: 0px 3px 6px #0000001d;
+              border: 1px solid rgba(0, 0, 0, 0.144);
               margin: 0;
               position: relative;
               // overflow: hidden;
