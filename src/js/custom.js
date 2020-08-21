@@ -1,3 +1,8 @@
+jQuery.validator.methods.matches = function (value, element, params) {
+    var re = new RegExp(params);
+    return this.optional(element) || re.test(value);
+}
+
 $(document).ready(function () {
     $(".menu .ham-btn").click(function (e) {
         e.preventDefault();
@@ -106,33 +111,91 @@ $(document).ready(function () {
         $(".booking_model").removeClass("booking_model_open");
     });
     // ================booking_model ends here==============================
-
     const slider = document.querySelector('.items');
     let isDown = false;
     let startX;
     let scrollLeft;
 
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-        console.log(walk);
-    });
+    if (slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+
+
+
+    $("#appointment-form").validate({
+        rules: {
+            fname: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            phoneNumber: {
+                required: true,
+                matches: "^(\\d|\\s)+$",
+                minlength: 10,
+                maxlength: 20
+            },
+            date: {
+                required: true
+            }
+        },
+        messages: {
+            phoneNumber: {
+                matches: "Please enter valid phone number"
+            }
+        },
+        submitHandler: function (form) {
+
+
+
+            $.ajax({
+                url: './mailer.php',
+                data: $(form).serialize(),
+                // processData: false,
+                // contentType: false,
+                type: 'POST',
+                dataType: 'json',
+                success: function (response) {
+                    //load json data from server and output message
+                    if (response.type == 'error') { //load json data from server and output message
+                        // output = '<div class="error">' + response.text + '</div>';
+                    } else {
+                        output = '<div class="success">' + response.text + '</div>';
+                        $("#response").css({ 'display': 'flex' }).html(output).slideDown();
+                        setTimeout(function () {
+                            $("#response").slideUp().css({ 'display': 'none' });
+                            $(form)[0].reset()
+                        }, 4000);
+                    }
+
+
+                }
+            });
+        }
+    })
+
 
 });
