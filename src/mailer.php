@@ -4,7 +4,7 @@
 
 
 //Recepient Email Address
-$to_email       = "mail@dtaledecor.com";
+$to_email       = "ayyoob@codeandhue.com";
 // $to_email       = "anvar@codeandhue.com";
 
 //check if its an ajax request, exit if not
