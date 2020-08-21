@@ -84,15 +84,15 @@ footer {
               align-items: center;
               a {
                 margin-right: 5px;
-                background-color: #444345;
-                width: 25px;
-                height: 25px;
+                // background-color: #444345;
+                width: 18px;
+                height: 18px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-items: center;
                 svg {
-                  width: 15px;
+                  width: 22px;
                   margin: 0 auto;
                   fill: #fff;
                 }
@@ -103,11 +103,11 @@ footer {
                   display: block;
                   background-color: transparent;
                 }
-                &:nth-child(1) {
-                  svg {
-                    width: 12px;
-                  }
-                }
+                // &:nth-child(1) {
+                //   svg {
+                //     width: 12px;
+                //   }
+                // }
               }
             }
           }
