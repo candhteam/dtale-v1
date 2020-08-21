@@ -184,7 +184,8 @@ $(document).ready(function () {
                         $("#response").css({ 'display': 'flex' }).html(output).slideDown();
                         setTimeout(function () {
                             $("#response").slideUp().css({ 'display': 'none' });
-                            $(form)[0].reset()
+                            $(form)[0].reset();
+                            $(".booking_model").removeClass("booking_model_open");
                         }, 4000);
                     }
 

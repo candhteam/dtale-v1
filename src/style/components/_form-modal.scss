@@ -261,12 +261,13 @@
               }
             }
           }
-          .success {
-            font-weight: $medium;
-            text-align: center;
-          }
         }
       }
     }
   }
+}
+
+.success {
+  font-weight: $medium;
+  text-align: center;
 }
