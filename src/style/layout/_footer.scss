@@ -161,11 +161,11 @@ footer {
           padding-bottom: 15px;
         }
         a {
-          color: #959393;
+          color: #fff;
           text-decoration: none;
           transition: 0.3s ease-out;
           &:hover {
-            color: #fff;
+            opacity: 0.8;
           }
         }
       }

@@ -168,10 +168,14 @@
               //   font-weight: $medium;
               font-weight: $light;
               display: block;
+              &.error {
+                color: #e45757;
+              }
             }
 
             input[type="date"] {
-              background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+              background: #fff
+                url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
                 97% 50% no-repeat;
               padding-right: 0;
             }
@@ -192,8 +196,7 @@
               width: 100%;
               border: 1px solid #9fa8ab;
               height: 200px;
-              padding-left: 20px;
-              padding-right: 20px;
+              padding: 20px;
               //   font-family: $fontNMm;
               //   font-weight: $medium;
               font-weight: 300;

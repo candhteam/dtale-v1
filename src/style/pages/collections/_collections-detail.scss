@@ -91,9 +91,10 @@
           }
 
           &.last-child {
-            padding-top: 50px;
+            // padding-top: 50px;
+            padding-bottom: 5px;
             @media (max-width: $media-xs) {
-              padding-top: 30px;
+              // padding-top: 30px;
             }
             span {
               text-align: left;
@@ -101,7 +102,8 @@
               color: #4d4d4b;
               font-weight: $regular;
               font-size: 14px;
-              line-height: 25px;
+              line-height: 22px;
+              max-width: 250px;
               @media (max-width: $media-md) {
                 font-size: 13px;
               }
@@ -119,6 +121,7 @@
           display: inline-flex;
           align-items: center;
           text-decoration: none;
+
           svg {
             width: 22px;
             fill: #fff;

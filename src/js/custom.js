@@ -157,9 +157,6 @@ $(document).ready(function () {
                 matches: "^(\\d|\\s)+$",
                 minlength: 10,
                 maxlength: 20
-            },
-            date: {
-                required: true
             }
         },
         messages: {
