@@ -261,6 +261,10 @@
               }
             }
           }
+          .success {
+            font-weight: $medium;
+            text-align: center;
+          }
         }
       }
     }
